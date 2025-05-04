@@ -23,6 +23,7 @@ jobs:
             - src
             - public
             - .elasticbeanstalk
+            - server.cjs
 
   build:
     executor: node-executor
