@@ -54,6 +54,11 @@ jobs:
             pip3 install awsebcli --upgrade --user
             export PATH=$HOME/.local/bin:$PATH
       - run:
+          name: list files
+          command: |
+            ls -la
+            cat .elasticbeanstalk/config.yml || echo "No config file found"
+      - run:
           name: Deploy to AWS Elastic Beanstalk
           command: |
             export PATH=$HOME/.local/bin:$PATH
