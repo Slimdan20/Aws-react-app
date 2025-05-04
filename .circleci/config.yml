@@ -39,7 +39,8 @@ jobs:
   deploy:
     executor: node-executor
     steps:
-      - checkout
+      - attach_workspace:
+          at: . 
       - run:
           name: Install Python and pip
           command: |
@@ -55,8 +56,6 @@ jobs:
           name: Deploy to AWS Elastic Beanstalk
           command: |
             export PATH=$HOME/.local/bin:$PATH
-            eb init aws-react-app --platform node.js --region us-west-2
-            eb use app-env
             eb deploy
 
 workflows:
