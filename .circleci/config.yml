@@ -33,6 +33,9 @@ jobs:
       - run:
           name: Build the project
           command: npm run build  
+      - run:
+          name: list files in build
+          command: ls -la build/
       - persist_to_workspace:
           root: .
           paths:
