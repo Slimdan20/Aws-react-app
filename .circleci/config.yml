@@ -59,7 +59,7 @@ jobs:
           name: Deploy to AWS Elastic Beanstalk
           command: |
             export PATH=$HOME/.local/bin:$PATH
-            eb deploy
+            eb deploy aws-react-circleci-env
 
 workflows:
   version: 2
