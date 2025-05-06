@@ -16,14 +16,7 @@ jobs:
       - persist_to_workspace:
           root: .
           paths:
-            - node_modules
-            - package.json
-            - package-lock.json
-            - index.html
-            - src
-            - public
-            - .elasticbeanstalk
-            - server.cjs
+            - .
 
   build:
     executor: node-executor
